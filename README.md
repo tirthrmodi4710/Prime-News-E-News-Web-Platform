@@ -97,8 +97,7 @@ git clone https://github.com/yourusername/prime-news-web-app.git
 - Open phpMyAdmin  
 - Create database (e.g., `prime_news`)  
 - Import SQL file from:
-
-src/database/
+  - src/database/
 
 
 ### 4. Configure Database Connection
