@@ -16,7 +16,8 @@ The system is designed with role-based access for Users, Journalists, and Admin,
 - User lands on homepage after login  
 - View news from multiple categories  
 - Select category to filter news  
-- View news with images and videos  
+- View news with images and videos
+- User can like the news  
 - Enable dark mode  
 - Inside news:
   - Listen to article  
@@ -123,11 +124,17 @@ Password: admin123
 
 ---
 
-## 📸 Screenshots
+## 📸 Some Screenshots
 
 User Home Page:
 <img width="1900" height="922" alt="3 User Home Page" src="https://github.com/user-attachments/assets/5531ab14-53e7-43a1-9fc0-1a5d753a5f8a" />
 
+Journalist Dashboard:
+<img width="1897" height="926" alt="8 Journalist Dashboard" src="https://github.com/user-attachments/assets/c4d6e40e-f306-487b-9a9e-c7a43abf4756" />
+
+
+Admin Dashboard:
+<img width="1917" height="927" alt="11 Admin Dashboard" src="https://github.com/user-attachments/assets/8a7c1403-0f01-43c8-83ad-ddc2004e3254" />
 
 ---
 
@@ -144,8 +151,7 @@ User Home Page:
 ---
 
 ## 🔮 Future Improvements
-
-- Comment and like system for users  
+  
 - REST API integration  
 - Mobile responsiveness improvements  
 - Advanced search and filtering  
