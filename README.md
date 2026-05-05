@@ -86,7 +86,7 @@ prime-news-web-app/
 
 ### 1. Clone Repository
 
-git clone https://github.com/yourusername/prime-news-web-app.git
+https://github.com/tirthrmodi4710/Prime-News-E-News-Web-Platform.git
 
 
 ### 2. Move Project to Server
