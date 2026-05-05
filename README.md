@@ -114,7 +114,6 @@ https://github.com/tirthrmodi4710/Prime-News-E-News-Web-Platform.git
 
 http://localhost/prime-news-web-app
 
-
 ---
 
 ## 🔑 Admin Access (Demo)
