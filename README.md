@@ -65,18 +65,19 @@ The system is designed with role-based access for Users, Journalists, and Admin,
 ---
 
 ## 📂 Project Structure
+
 prime-news-web-app/
 │
-├── doc/ # Complete project documentation
-├── screenshots/ # UI screenshots
+├── doc/                 # Complete project documentation  
+├── screenshots/         # UI screenshots  
 │
-├── src/
-│ ├── uploads/ # Uploaded images & videos (by journalist)
-│ ├── images/ # Static website images
-│ ├── database/ # SQL file
-│ └── # Coding files
+├── src/  
+│   ├── uploads/         # Uploaded images & videos (by journalist)  
+│   ├── images/          # Static website images  
+│   ├── database/        # SQL file  
+│   └── code/            # All application code (PHP, HTML, CSS, JS)  
 │
-└── README.md
+└── README.md  
 
 ---
 
