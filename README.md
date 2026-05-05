@@ -123,15 +123,11 @@ Password: admin123
 
 ---
 
-## 🎥 Demo
-
-👉 Add your video link here  
-
----
-
 ## 📸 Screenshots
 
-(Add homepage, admin panel, journalist panel, features)
+User Home Page:
+<img width="1900" height="922" alt="3 User Home Page" src="https://github.com/user-attachments/assets/5531ab14-53e7-43a1-9fc0-1a5d753a5f8a" />
+
 
 ---
 
