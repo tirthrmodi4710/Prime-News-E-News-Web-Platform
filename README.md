@@ -67,6 +67,7 @@ The system is designed with role-based access for Users, Journalists, and Admin,
 
 ## 📂 Project Structure
 
+```text
 prime-news-web-app/
 │
 ├── doc/                 # Complete project documentation  
@@ -79,7 +80,7 @@ prime-news-web-app/
 │   └── code/            # All application code (PHP, HTML, CSS, JS)  
 │
 └── README.md  
-
+```
 ---
 
 ## ⚙️ Installation & Setup
