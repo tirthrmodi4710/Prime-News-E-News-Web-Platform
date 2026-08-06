@@ -32,7 +32,7 @@ Role-Based E-News Publishing Platform with Secure Authentication, Content Manage
 
 #### 👤 User
 
-Email: **testdemo@gmail.com**
+Email: `testdemo@gmail.com`
 
 Password: **PrimeNews@123**
 
