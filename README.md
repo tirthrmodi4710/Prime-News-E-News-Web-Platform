@@ -109,13 +109,13 @@ Password: `admin123`
 |-------|-----------|
 | ![](screenshots/admin-login.png) | ![](screenshots/admin-dashboard.png) |
 
-| Category Management | Pending News |
+| Category Management | Published News Management |
 |--------------------|--------------|
-| ![](screenshots/category-management.png) | ![](screenshots/pending-news.png) |
+| ![](screenshots/category-management.png) | ![](screenshots/news-management.png) |
 
-| Published News Management | News Analytics |
+| Pending News | News Analytics |
 |---------------------------|----------------|
-| ![](screenshots/news-management.png) | ![](screenshots/news-likes.png) |
+| ![](screenshots/pending-news.png) | ![](screenshots/news-likes.png) |
 
 | Other News |
 |------------|
