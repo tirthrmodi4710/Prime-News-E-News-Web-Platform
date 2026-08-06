@@ -34,19 +34,19 @@ Role-Based E-News Publishing Platform with Secure Authentication, Content Manage
 
 Email: `testdemo@gmail.com`
 
-Password: **PrimeNews@123**
+Password: `PrimeNews@123`
 
 #### 📝 Journalist
 
-Username: **journalist**
+Username: `journalist`
 
-Password: **journalist123**
+Password: `journalist123`
 
 #### 🔐 Admin
 
-Username: **admin**
+Username: `admin`
 
-Password: **admin123**
+Password: `admin123`
 
 > **Note:** Since the application is hosted on a free hosting service, the first request may take a few seconds to load.
 
