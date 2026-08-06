@@ -31,8 +31,10 @@ Role-Based E-News Publishing Platform with Secure Authentication, Content Manage
 ### 🔑 Demo Credentials
 
 #### 👤 User
-- Register a new account using your email.
-- Verify your account with the OTP sent to your email.
+
+Email: **testdemo@gmail.com**
+
+Password: **PrimeNews@123**
 
 #### 📝 Journalist
 
@@ -561,7 +563,6 @@ This project demonstrates proficiency in:
 **Tirth Modi**
 
 - GitHub: https://github.com/tirthrmodi4710
-- LinkedIn: *(Add your LinkedIn profile here if desired.)*
 
 ------------------------------------------------------------------------
 
