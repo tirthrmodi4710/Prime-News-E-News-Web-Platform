@@ -11,27 +11,52 @@ if (!isset($_SESSION['admin_id'])) {
 
 $admin_username = $_SESSION['admin_username'];
 
-// Handle Add
-echo "<script>console.log('Form submitted');</script>";
+// Handle Add Other News
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['add_other_news'])) {
 
-// Handle Add
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['add_other_news'])) {
-    error_reporting(E_ALL);
-    ini_set('display_errors', 1);
+    $title = trim($_POST['title'] ?? '');
+    $content = trim($_POST['content'] ?? '');
 
-    $title = $conn->real_escape_string($_POST['title']);
-    $content = $conn->real_escape_string($_POST['content']);
-    $created_at = date('Y-m-d H:i:s');
+    if ($title === '' || $content === '') {
 
-    $query = "INSERT INTO other_news (title, content, created_at) VALUES ('$title', '$content', '$created_at')";
+        echo "<script>
+            alert('❌ Title and content are required.');
+        </script>";
 
-    // Print SQL in browser console for debugging
-    echo "<script>console.log(" . json_encode($query) . ");</script>";
-
-    if ($conn->query($query)) {
-        echo "<script>alert('✅ Other News Added Successfully');</script>";
     } else {
-        echo "<script>alert('❌ MySQL Error: " . $conn->error . "');</script>";
+
+        $stmt = $conn->prepare(
+            "INSERT INTO other_news (title, content) VALUES (?, ?)"
+        );
+
+        if (!$stmt) {
+            echo "<script>
+                alert('❌ SQL Prepare Error: " .
+                addslashes($conn->error) .
+                "');
+            </script>";
+        } else {
+
+            $stmt->bind_param("ss", $title, $content);
+
+            if ($stmt->execute()) {
+
+                echo "<script>
+                    alert('✅ Other News Added Successfully');
+                    window.location.href = 'admin_manage_other_news.php';
+                </script>";
+
+            } else {
+
+                echo "<script>
+                    alert('❌ Database Error: " .
+                    addslashes($stmt->error) .
+                    "');
+                </script>";
+            }
+
+            $stmt->close();
+        }
     }
 }
 
@@ -647,13 +672,17 @@ while ($row = $result->fetch_assoc()) {
 
             <!-- Add Other News -->
             <form method="post" class="add-form">
-                <input type="text" name="title" placeholder="Other News Title" required>
-                <textarea name="content" rows="4" placeholder="Other News Content" required></textarea>
-                <button type="submit" name="add_other_news">
-                    <i class="fas fa-plus"></i> Add Other News
-                </button>
-            </form>
+    			<input type="hidden" name="add_other_news" value="1">
 
+    			<input type="text" name="title" placeholder="Other News Title" required>
+
+    			<textarea name="content" rows="4" placeholder="Other News Content" required></textarea>
+
+    			<button type="submit">
+        			<i class="fas fa-plus"></i> Add Other News
+    			</button>
+			</form>
+            
             <!-- Display and Edit -->
             <div class="table-container">
                 <table>
@@ -675,13 +704,22 @@ while ($row = $result->fetch_assoc()) {
                                 <td><?= $news['id'] ?></td>
                                 <td>
                                     <form method="post" class="update-form">
-                                        <input type="hidden" name="news_id" value="<?= $news['id'] ?>">
-                                        <input type="text" name="title" value="<?= htmlspecialchars($news['title']) ?>" required>
-                                        <textarea name="content" rows="3" required><?= htmlspecialchars($news['content']) ?></textarea>
-                                        <button type="submit" name="update_other_news">
-                                            <i class="fas fa-save"></i> Update
-                                        </button>
-                                    </form>
+    									<input type="hidden" name="update_other_news" value="1">
+    									<input type="hidden" name="news_id" value="<?= $news['id'] ?>">
+
+    									<input type="text"
+           										name="title"
+           										value="<?= htmlspecialchars($news['title']) ?>"
+           										required>
+
+    									<textarea name="content"
+              									  rows="3"
+              									  required><?= htmlspecialchars($news['content']) ?></textarea>
+
+    									<button type="submit">
+        									<i class="fas fa-save"></i> Update
+    									</button>
+									</form>
                                 </td>
                                 <td>
                                     <a href="admin_manage_other_news.php?delete_id=<?= $news['id'] ?>" class="delete-btn" onclick="return confirm('Are you sure you want to delete this other news?');">
